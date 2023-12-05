@@ -106,6 +106,8 @@ def index():
 @app.route('/video_feed')
 def video_feed():
     return Response(gen_frames(), mimetype='multipart/x-mixed-replace; boundary=frame')
+
+#To stop the video using a button 
 @app.route('/stop_video')
 def stop_video():
     global video_stream_active
