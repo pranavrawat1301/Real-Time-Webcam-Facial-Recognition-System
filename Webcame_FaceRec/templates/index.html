@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-time Face Recognition</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='static/styles.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2">
+                <h1 class="title">Real-time Face Recognition</h1>
+                <img id="video-feed" src="{{ url_for('video_feed') }}" width="100%">
+                <!-- Add a button to stop the video stream -->
+                <button id="stop-button" onclick="stopVideo()">Stop Video Stream</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function stopVideo() {
+            // You can add additional logic here if needed
+            // For now, simply redirect to the stop_video route
+            window.location.href = "{{ url_for('stop_video') }}";
+        }
+    </script>
+</body>
+
+</html>
+
