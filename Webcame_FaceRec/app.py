@@ -35,7 +35,7 @@ def gen_frames():
         else:
             
             
-            
+            #Eye and Face detector and draw a box around them
             detector=cv2.CascadeClassifier('Haarcascades/haarcascade_frontalface_default.xml')
             eye_cascade = cv2.CascadeClassifier('Haarcascades/haarcascade_eye.xml')
             faces=detector.detectMultiScale(frame,1.1,7)
